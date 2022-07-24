@@ -12,6 +12,7 @@ function resize(inputPath, outputPath, width) {
             }
             else {
                 console.log("Deu tudo certo!");
+                compress(outputPath, "./compressed/")
             }
         })
 }
