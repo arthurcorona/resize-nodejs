@@ -13,6 +13,8 @@
   "author": "Corona\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DArthur Corona",
   "license": "ISC",
   "dependencies": {
+    "gifsicle": "^5.2.1",
+    "pngquant-bin": "^6.0.1",
     "sharp": "^0.30.7"
   },
   "devDependencies": {

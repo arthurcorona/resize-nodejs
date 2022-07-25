@@ -19,7 +19,7 @@ function resize(inputPath, outputPath, width) {
 
 function compress(pathInput, outputPath) {
 
-  compress_images(pathInput, outputPath, { compress_force: false, statistic: true, autoupdate: true }, false,
+  compressImages(pathInput, outputPath, { compress_force: false, statistic: true, autoupdate: true }, false,
     { jpg: { engine: "mozjpeg", command: ["-quality", "60"] } },
     { png: { engine: "pngquant", command: ["--quality=20-50", "-o"] } },
     { svg: { engine: "svgo", command: "--multipass" } },
@@ -32,7 +32,7 @@ function compress(pathInput, outputPath) {
   console.log("-------------");
 }
 );
-  
+ 
 }
 
 resize(path, './temporary_directory/output_resize.jpg', width)
