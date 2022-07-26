@@ -1,6 +1,6 @@
 const sharp = require('sharp')
 const compressImages = require('compress-images')
-const fileSystem = requie('fs')
+const fileSystem = require('fs')
 
 let path = process.argv[2]
 let width = Number(process.argv[3])
@@ -12,7 +12,7 @@ function resize(inputPath, outputPath, width) {
                 console.log(error);
             }
             else {
-                console.log("Deu tudo certo!");
+                console.log("resized image!");
                 compress(outputPath, "./compressed/")
             }
         })
