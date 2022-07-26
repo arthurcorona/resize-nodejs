@@ -1,5 +1,6 @@
 const sharp = require('sharp')
 const compressImages = require('compress-images')
+const fileSystem = requie('fs')
 
 let path = process.argv[2]
 let width = Number(process.argv[3])
@@ -30,6 +31,17 @@ function compress(pathInput, outputPath) {
   console.log(completed);
   console.log(statistic);
   console.log("-------------");
+
+  fileSystem.unlink(pathInput, (error) => {
+    if(error) {
+      console.log(error);
+    }
+    else{
+      console.log(pathInput, " deleted");
+    }
+  })
+
+
 }
 );
  
